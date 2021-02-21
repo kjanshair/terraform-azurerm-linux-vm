@@ -43,7 +43,7 @@ module "network_security_group" {
 }
 
 module "vm" {
-  source       = "./modules/vm"
+  source       = "kjanshair/linux-vm/azurerm"
   resource_group = azurerm_resource_group.azure_resource_group.location
   location     = "southeastasia"
   vm_subnet_id = module.azure_virtual_network.vnet_subnets[0]
